@@ -13,4 +13,9 @@ $(document).ready(function() {
 	} else {
 		$('#dimmer').addClass('hidden');
 	}
+	
+	
+	init();
+	
+	console.log(links);
 });
