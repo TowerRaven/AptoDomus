@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>My Homepage</title>
+		<title>No Name Homepage</title>
 		
 		<link rel="stylesheet" type="text/css" href="reset.css" />
 		<link rel="stylesheet" type="text/css" href="style.css" />
@@ -13,19 +13,46 @@
 		<script type="text/javascript" src="homepage.js"></script>
 	</head>
 	<body>
+		<div id="dimmer"></div>
 		<div id="wrap">
-			<div id="js-notice">
+			<div id="js-notice" class="notice">
 				<h2>JavaScript Disabled</h2>
-				<p>Sorry, this page requires JavaScript to run. If you want to find out more about this webapp please check out our <a href="about.html">about page</a>.</p>
+				<p>Sorry, I require JavaScript to run. If you want to find out more about me please check out my <a href="about.html">about page</a>.</p>
+			</div>
+			
+			<div id="ls-notice" class="hidden notice">
+				<h2>No HTML5 Storage</h2>
+				<p>I cannot find any storage on your browser, please check that you are running a supported browser and have local storage available before trying to use me.</p>
 			</div>
 			
 			<header>
-				<h1>My Homepage</h1>
+				<h1>No Name Homepage</h1>
+				
+				<div id="toolbar">
+					<ul>
+						<li id="settings">Settings</li>
+						<li id="themes">Themes</li>
+						<li id="about">About</li>
+					</ul>
+				</div>
 			</header>
 			
-			<section id="content">
+			
+			
+			<div id="content">
+				<section id="search" class="fullwidth">
+					<form id="searchform">
+						<input name="s" id="s" type="text" placeholder="Search&#133;" /> <input value="Search" type="submit">
+					</form>
+				</section>
 				
-			</section>
+				<div id="mainwidgets">
+					<section id="favourites" class="thirdwidth">
+						<h2>Favourite Links</h2>
+						<ul id="favouriteslist"></ul>
+					</section>
+				</div>
+			</div>
 			
 			<footer>
 				
