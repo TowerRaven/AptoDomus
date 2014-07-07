@@ -4,5 +4,13 @@
  */
 
 $(document).ready(function() {
+	// Hide the JavaScript warning
+	$('#js-notice').addClass('hidden');
 	
+	// Detect local storage
+	if(!supports_html5_storage()) {
+		$('#ls-notice').removeClass('hidden');
+	} else {
+		$('#dimmer').addClass('hidden');
+	}
 });
