@@ -89,12 +89,15 @@ h6 { font-size: 90%; }
 }
 
 .fullwidth {
-	width: 100%;
+	width: 96.5%;
+	clear: both;
 }
-.thirdwidth {
+.onethird {
+	float: left;
 	width: 30%;
 }
-	.twothirdwidth {
+	.twothird {
+		float: left;
 		width: 60%;
 	}
 
