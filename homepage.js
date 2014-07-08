@@ -27,10 +27,7 @@ $(document).ready(function() {
 	/** 
 	 * initPage generates the layout and populates it with widgets
 	 */
-	initPage('#content', window.list["rows"]);
-	
-	
-	//TODO Generate rows and columns
+	initPage('#content');
 	
 	/*console.log(window.list["rows"]);
 	

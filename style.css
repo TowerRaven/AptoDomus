@@ -80,6 +80,7 @@ h6 { font-size: 90%; }
 	min-height: 60px;
 	margin: 1.2em;
 	padding: 0.6em;
+	overflow: auto;
 }
 .col {
 	margin: 0.6em;
@@ -102,7 +103,7 @@ h6 { font-size: 90%; }
 	}
 
 /** Widgets */
-#search { padding-bottom: 1.2em; text-align: center; }
+.search { padding-bottom: 1.2em; text-align: center; }
 	#searchform {  }
 	#s {
 		border: none;
