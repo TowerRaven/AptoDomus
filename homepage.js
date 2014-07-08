@@ -29,18 +29,11 @@ $(document).ready(function() {
 	 */
 	initPage('#content');
 	
-	/*console.log(window.list["rows"]);
-	
-	console.log(window.list["columns"]);
-	
-	widget('links', window.list["columns"][1]["data"]);*/
-	
-	//widgetRegistry.output('linklist', list["columns"][1].data);
-	
-	//widgetRegistry.form('linklist', list["columns"][1].data);
-	
-	//console.log(widgetRegistry.name('linklist'));
-	
-	
-	// Widget initialisation
+	$('#edit').on('change', function() {
+		if($(this).prop('checked') == true) {
+			console.log('Edit Mode Enabled');
+		} else {
+			console.log('Edit Mode Disabled');
+		}
+	});
 });

@@ -1,8 +1,21 @@
+/**
+ * HomePage Stylesheet
+ * v.0.01
+ * 
+ * Color Palette (http://www.colourlovers.com/palette/1930/cheer_up_emo_kid)
+ * Mighty Slate: 		#556270
+ * Pacifica: 			#4ECDC4
+ * Apple Chic:			#C7F464
+ * Cheery Pink:			#FF6B6B
+ * Grandma's Pillow:	#C44D58
+ */
+
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
 
 html, body, input {
 	font-family: 'Open Sans', ariel, sans-serif;
 	font-weight: 300;
+	color: #556270;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -101,6 +114,35 @@ h6 { font-size: 90%; }
 		float: left;
 		width: 60%;
 	}
+	
+/** Control Elements */
+.button {
+	background: #C44D58;
+	/*background-image: linear-gradient(to bottom, #FF6B6B, #C44D58);*/
+		border-radius: 3px;
+	box-shadow: #FF6B6B 0px 1px 0 0px;
+	color: #FFF;
+	cursor: pointer;
+	padding: 0.4em 0.4em 0.4em 0.4em;
+}
+.switch {
+	cursor: pointer;
+}
+.switch:checked {
+	
+}
+
+/** General Styling */
+a { color: #FF6B6B; }
+a:visited { color: #C44D58; }
+
+p {
+	line-height: 112%;
+}
+
+ul li, ol li {
+	line-height: 112%;
+}
 
 /** Widgets */
 .search { padding-bottom: 1.2em; text-align: center; }
@@ -108,24 +150,23 @@ h6 { font-size: 90%; }
 	#s {
 		border: none;
 		border-radius: 6px 0px 0px 6px;
-		box-shadow:  inset #CBAD8B 0px 0px 0px 1px;
+		box-shadow:  inset #C44D58 0px 0px 0px 1px;
 		font-size: 105%;
 		height: 33px;
 		min-width: 400px;
 		padding-left: 0.6em;  
 	}
 	#searchform input[type=submit] {
-		background: #CBAD8B;
+		background: #C44D58;
 		border: none;
 		border-radius: 0px 6px 6px 0px;
+		color: #FFF;
+		cursor: pointer;
 		margin-left: -0.25em;
 		height: 35px;
 		font-size: 105%;
 	}
 
-#mainwidgets {
-	
-}
-	#favourites {  }
-	#weather {  }
+.favourites {  }
+.weather {  }
 	
