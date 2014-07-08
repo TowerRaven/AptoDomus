@@ -14,8 +14,23 @@ $(document).ready(function() {
 		$('#dimmer').addClass('hidden');
 	}
 	
+	/** 
+	 * initLocalStorage creates window.list of main localStorage containers 
+	 * Currently that includes:
+	 * 	window.list["rows"]
+	 * 	window.list["columns"]
+	 */
+	initLocalStorage();
 	
-	init();
+	console.log(logUsage());
+	
+	/** 
+	 * initPage generates the layout and populates it with widgets
+	 */
+	initPage('#content', window.list["rows"]);
+	
+	
+	//TODO Generate rows and columns
 	
 	/*console.log(window.list["rows"]);
 	
@@ -23,9 +38,11 @@ $(document).ready(function() {
 	
 	widget('links', window.list["columns"][1]["data"]);*/
 	
-	widgetRegistry.output('linklist', list["columns"][1].data);
+	//widgetRegistry.output('linklist', list["columns"][1].data);
 	
-	widgetRegistry.form('linklist', list["columns"][1].data);
+	//widgetRegistry.form('linklist', list["columns"][1].data);
+	
+	//console.log(widgetRegistry.name('linklist'));
 	
 	
 	// Widget initialisation
