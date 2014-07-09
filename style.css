@@ -1,7 +1,7 @@
 /**
  * HomePage Stylesheet
  * v.0.01
- * 
+ *
  * Color Palette (http://www.colourlovers.com/palette/1930/cheer_up_emo_kid)
  * Mighty Slate: 		#556270
  * Pacifica: 			#4ECDC4
@@ -21,6 +21,7 @@ html, body, input {
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 400;
 	font-weight: bold;
+	margin: 0.3em 0;
 }
 h1 { font-size: 130%; }
 h2 { font-size: 120%; }
@@ -28,6 +29,10 @@ h3 { font-size: 110%; }
 h4 { font-size: 100%; }
 h5 { font-size: 100%; }
 h6 { font-size: 90%; }
+
+p {
+	margin: 0.3em 0;
+}
 
 /** Notice stuff */
 #dimmer {
@@ -72,18 +77,18 @@ h6 { font-size: 90%; }
 
 #toolbar { float: right; }
 	#toolbar ul li {
-		display: inline-block; 
+		display: inline-block;
 	}
 
 #content {
 	padding: 1.2em 0.6em;
 }
 
-#wrap > footer { 
-	display: block; 
+#wrap > footer {
+	display: block;
 	clear: both;
 	padding: 1.2em;
-	overflow: auto; 
+	overflow: auto;
 }
 
 /** General Layouts */
@@ -114,7 +119,7 @@ h6 { font-size: 90%; }
 		float: left;
 		width: 60%;
 	}
-	
+
 /** Control Elements */
 .button {
 	background: #C44D58;
@@ -129,7 +134,7 @@ h6 { font-size: 90%; }
 	cursor: pointer;
 }
 .switch:checked {
-	
+
 }
 
 /** General Styling */
@@ -154,7 +159,7 @@ ul li, ol li {
 		font-size: 105%;
 		height: 33px;
 		min-width: 400px;
-		padding-left: 0.6em;  
+		padding-left: 0.6em;
 	}
 	#searchform input[type=submit] {
 		background: #C44D58;
@@ -169,4 +174,3 @@ ul li, ol li {
 
 .favourites {  }
 .weather {  }
-	
