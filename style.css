@@ -137,6 +137,27 @@ p {
 
 }
 
+
+.edit-control {  width: auto; }
+.control-hidden { transition: width 2s; width: 0px; overflow: hidden; }
+	.edit-control button {
+		background: #F5F5F5;
+		background-image: linear-gradient(to bottom, #FFF, #F5F5F5);
+		border: none;
+			border-radius: 4px;
+		box-shadow: #E5E5E5 0 2px 0 -1px;
+		margin-left: 0.3em;
+		transition: all 0.5s;
+	}
+	.edit-control button.add:hover {
+		background: #9dc91c;
+		box-shadow: #555 0 2px 0 -1px;
+	}
+	.edit-control button.remove:hover {
+		background: #b70000;
+		box-shadow: #555 0 2px 0 -1px;
+	}
+
 /** General Styling */
 a { color: #FF6B6B; }
 a:visited { color: #C44D58; }
