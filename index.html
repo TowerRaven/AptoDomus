@@ -2,48 +2,48 @@
 <html>
 	<head>
 		<title>No Name Homepage</title>
-		
-		<meta charset="utf-8"> 
-		
+
+		<meta charset="utf-8">
+
 		<link rel="stylesheet" type="text/css" href="reset.css" />
 		<link rel="stylesheet" type="text/css" href="style.css" />
-		
+
 		<script type="text/javascript" src="lib/inc/jquery-2.1.1.min.js"></script>
 		<script type="text/javascript" src="lib/inc/"></script>
-		
+
 		<script type="text/javascript" src="lib/widgets.js"></script>
 		<script type="text/javascript" src="lib/localStorage.js"></script>
 		<script type="text/javascript" src="lib/functions.js"></script>
 		<script type="text/javascript" src="homepage.js"></script>
 	</head>
-	<body>
+	<body class="edit-mode-on">
 		<div id="dimmer"> </div>
 		<div id="wrap">
 			<div id="js-notice" class="notice">
 				<h2>JavaScript Disabled</h2>
 				<p>Sorry, I require JavaScript to run. If you want to find out more about me please check out my <a href="about.html">about page</a>.</p>
 			</div>
-			
+
 			<div id="ls-notice" class="hidden notice">
 				<h2>No HTML5 Storage</h2>
 				<p>I cannot find any storage on your browser, please check that you are running a supported browser and have local storage available before trying to use me.</p>
 			</div>
-			
+
 			<header>
 				<h1>No Name Homepage</h1>
-				
+
 				<div id="toolbar">
 					<ul>
-						<li id="editswitch">Edit Mode: <input type="checkbox" id="edit" name="edit" class="switch" /></li>
+						<li id="editswitch">Edit Mode: <input type="checkbox" id="edit" name="edit" class="switch" checked /></li>
 						<li id="settings" class="button">Settings</li>
 						<li id="themes" class="button">Themes</li>
 						<li id="about" class="button">About</li>
 					</ul>
 				</div>
 			</header>
-			
-			
-			
+
+
+
 			<div id="content">
 				<!--
 				<section id="search" class="fullwidth">
@@ -51,7 +51,7 @@
 						<input name="s" id="s" type="text" placeholder="Search&#133;" /> <input value="Search" type="submit">
 					</form>
 				</section>
-				
+
 				<div id="mainwidgets">
 					<section id="favourites" class="thirdwidth">
 						<h2>Favourite Links</h2>
@@ -60,9 +60,9 @@
 				</div>
 				-->
 			</div>
-			
+
 			<footer>
-				
+
 			</footer>
 		</div><!--#wrap-->
 	</body>
