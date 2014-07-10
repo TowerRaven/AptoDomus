@@ -147,16 +147,14 @@ p {
 			border-radius: 4px;
 		box-shadow: #E5E5E5 0 2px 0 -1px;
 		margin-left: 0.3em;
+		padding: 3px 8px;
 		transition: all 0.5s;
 	}
-	.edit-control button.add:hover {
-		background: #9dc91c;
-		box-shadow: #555 0 2px 0 -1px;
-	}
-	.edit-control button.remove:hover {
-		background: #b70000;
-		box-shadow: #555 0 2px 0 -1px;
-	}
+	.edit-control button:hover { box-shadow: #555 0 2px 0 -1px; }
+		.edit-control button.add:hover { background: #9dc91c; }
+		.edit-control button.edit:hover { background: #9dc91c; }
+		.edit-control button.remove:hover { background: #b70000; }
+		.edit-control button img { width: 12px; height: 12px; }
 
 /** General Styling */
 a { color: #FF6B6B; }
