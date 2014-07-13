@@ -137,6 +137,7 @@ p {
 .button {
 	background: #C44D58;
 	/*background-image: linear-gradient(to bottom, #FF6B6B, #C44D58);*/
+	border: none;
 		border-radius: 3px;
 	box-shadow: #FF6B6B 0px 1px 0 0px;
 	color: #FFF;
