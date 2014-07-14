@@ -34,18 +34,15 @@ $(document).ready(function() {
 
 	//TODO Remove
 	$("[name='resetls']").on('click', function() {
-		console.log('Reset Button');
+		$('#content').slideUp("normal", function() {
+			$('#content').html(' ');
 
-		$('#content').slideUp();
+			resetLocalStorage();
 
-		$('#content').html(' ');
+			initPage('#content');
 
-		resetLocalStorage();
-
-		initPage('#content');
-
-		initEditMode();
-
-		$('#content').slideDown();
+			initEditMode();
+		}).slideDown();
+		console.log('Urgh, so satisfying :Q');
 	});
 });
