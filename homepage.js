@@ -1,7 +1,8 @@
 /**
- * Homepage v.0.01
+ * Homepage v.0.02
  * Dependencies: jQuery (v2+).
  */
+var home_version = "0.02";
 
 $(document).ready(function() {
 	// Hide the JavaScript warning
@@ -20,7 +21,7 @@ $(document).ready(function() {
 	 * 	window.list["rows"]
 	 * 	window.list["columns"]
 	 */
-	initLocalStorage();
+	initLocalStorage(home_version);
 
 	console.log(logUsage());
 
@@ -30,21 +31,21 @@ $(document).ready(function() {
 	initPage('#content');
 
 	initEditMode();
-	
+
 	//TODO Remove
 	$("[name='resetls']").on('click', function() {
 		console.log('Reset Button');
-		
+
 		$('#content').slideUp();
-		
+
 		$('#content').html(' ');
-		
+
 		resetLocalStorage();
-		
+
 		initPage('#content');
-		
+
 		initEditMode();
-		
+
 		$('#content').slideDown();
 	});
 });
