@@ -34,6 +34,10 @@ p {
 	margin: 0.3em 0;
 }
 
+button {
+	font-family: 'Open Sans', ariel, sans-serif;
+}
+
 /** Notice stuff */
 #dimmer {
 	position: fixed;
@@ -186,6 +190,34 @@ p {
 .invalid {
 	border: #F00 1px solid;
 }
+.submitadd, .submitremoval {
+	border: none;
+	border-radius: 10px;
+	box-shadow: #999 0 2px 0 -1px;
+	cursor: pointer;
+	height: 20px;
+	line-height: 20px;
+	margin: 0px;
+	padding: 0px;
+	width: 20px;
+}
+	.submitremoval {
+		background: #E99;
+		text-justify: right;
+	}
+	.submitadd {
+		background: #9E9;
+
+	}
+	.submitadd img, .submitremoval img {
+		width: 12px;
+	}
+.submitadd:hover {
+
+}
+.submitremoval:hover {
+
+}
 
 .overlay {
 	z-index: 500;
@@ -231,6 +263,9 @@ p {
 ul li, ol li {
 	line-height: 112%;
 }
+.img-helper {
+	vertical-align: middle;
+}
 
 /** Widgets */
 .search { padding-bottom: 1.2em; text-align: center; }
@@ -254,6 +289,38 @@ ul li, ol li {
 		height: 35px;
 		font-size: 105%;
 	}
+
+
+.links ul li {
+	list-style: none;
+	padding: 0.2em;
+}
+.links input {
+	border: 1px solid #999;
+	border-radius: 5px;
+	margin: 0 0.1em 0.2em 0;
+}
+.edit-mode-on .links li {
+	clear: both;
+	overflow: auto;
+	padding: 0.2em;
+	transition: background 0.2s;
+}
+	.edit-mode-on .links li:hover {
+		background: #EEE;
+		border-radius: 5px;
+	}
+	.edit-mode-on .links li.edit-element:hover { background: #FFF; }
+	.links .submitremoval { float: right; }
+	.links .submitadd {
+		font-size: 12px;
+		float: right;
+		width: auto;
+		padding-right: 0.5em;
+	}
+		.links .submitadd img {
+			margin: 0 0.3em 0 0.2em;
+		}
 
 .favourites {  }
 .weather {  }
