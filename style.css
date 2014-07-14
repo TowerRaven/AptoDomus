@@ -183,6 +183,9 @@ p {
 		.edit-control button.remove:hover, .edit-row-control button.remove:hover { background: #b70000; }
 		.edit-control button img, .edit-row-control button img { width: 12px; height: 12px; }
 
+.invalid {
+	border: #F00 1px solid;
+}
 /** General Styling */
 a { color: #FF6B6B; }
 a:visited { color: #C44D58; }
