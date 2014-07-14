@@ -202,11 +202,11 @@ button {
 	width: 20px;
 }
 	.submitremoval {
-		background: #E99;
+		background: #FF6B6B;
 		text-justify: right;
 	}
 	.submitadd {
-		background: #9E9;
+		background: #C7F464;
 
 	}
 	.submitadd img, .submitremoval img {
