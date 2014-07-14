@@ -30,4 +30,21 @@ $(document).ready(function() {
 	initPage('#content');
 
 	initEditMode();
+	
+	//TODO Remove
+	$("[name='resetls']").on('click', function() {
+		console.log('Reset Button');
+		
+		$('#content').slideUp();
+		
+		$('#content').html(' ');
+		
+		resetLocalStorage();
+		
+		initPage('#content');
+		
+		initEditMode();
+		
+		$('#content').slideDown();
+	});
 });
