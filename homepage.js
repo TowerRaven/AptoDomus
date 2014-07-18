@@ -1,5 +1,6 @@
 /**
- * Homepage v.0.02
+ * Homepage
+ * Version: 0.02
  * Dependencies: jQuery (v2+).
  */
 var home_version = "0.02";
