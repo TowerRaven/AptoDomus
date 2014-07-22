@@ -85,7 +85,7 @@ button {
 	}
 
 #content {
-	padding: 1.2em 0.6em;
+	padding: 0em 0.6em 1.2em 0.6em;
 }
 
 #wrap > footer {
@@ -98,7 +98,7 @@ button {
 /** General Layouts */
 .row {
 	min-height: 60px;
-	margin: 1.2em;
+	margin: 0.6em;
 	padding: 0.6em;
 	overflow: auto;
 
