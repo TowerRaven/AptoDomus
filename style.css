@@ -85,6 +85,10 @@ button {
 #wrap > footer {  }
 
 #toolbar { float: right; }
+	#toolbar ul {
+		margin: 0;
+		padding: 0;
+	}
 	#toolbar ul li {
 		display: inline-block;
 	}
@@ -153,6 +157,7 @@ button {
 }
 .edit-mode-on .row { border: 2px dashed #CCC; }
 .edit-mode-on .col { border: 2px dashed #DDD; }
+	.edit-mode-on .inner { padding: 0.6em; }
 
 .button {
 	background: #C44D58;
