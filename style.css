@@ -75,7 +75,12 @@ button {
 #ls-notice { z-index: 9999; }
 
 /** Layout */
-#wrap > header { display: block; clear: both; overflow: auto; padding: 1.2em; }
+#wrap > header {
+	display: block;
+	clear: both;
+	overflow: auto;
+	padding: 0.6em 1.2em;
+}
 #wrap > header h1 { float: left; }
 #wrap > footer {  }
 
@@ -99,23 +104,27 @@ button {
 .row {
 	min-height: 60px;
 	margin: 0.6em;
-	padding: 0.6em;
 	overflow: auto;
 
 	border-radius: 3px;
 	border: 2px dashed transparent;
+	text-align: right;
 	transition: border 0.4s;
 }
 	.row-inner {
 		clear: both;
+		text-align: left;
 		overflow: auto;
 	}
+
+	.addcolumninput {
+
+	}
 	.addcolumn {
-		float: right;
+		margin: 0 1.2em 1em 0;
 	}
 .col {
 	margin: 0.6em;
-	padding: 0.6em;
 
 	border-radius: 3px;
 	border: 2px dashed transparent;
@@ -165,7 +174,7 @@ button {
 .edit-control-header {
 	border-radius: 5px;
 	color: #999;
-	padding: 0.2em;
+	padding: 0.2em 0.6em;
 	transition: color 0.4s;
 	}
 	.edit-control-header:hover { color: #333; }
@@ -297,7 +306,10 @@ ul li, ol li {
 		font-size: 105%;
 	}
 
-
+.links ul {
+	margin-left: 0;
+	padding-left: 0;
+}
 .links ul li {
 	list-style: none;
 	padding: 0.2em;
