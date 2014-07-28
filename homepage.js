@@ -1,8 +1,9 @@
 /**
- * Homepage v.0.02
+ * Homepage
+ * Version: 0.03
  * Dependencies: jQuery (v2+).
  */
-var home_version = "0.02";
+var home_version = "0.03";
 
 $(document).ready(function() {
 	// Hide the JavaScript warning
