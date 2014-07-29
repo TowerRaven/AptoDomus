@@ -149,6 +149,9 @@ button {
 	}
 
 /** Control Elements */
+#row-edit {
+	text-align: right;
+}
 .edit-row-control {
 	display: inline-block;
 
