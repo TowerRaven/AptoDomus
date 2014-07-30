@@ -158,9 +158,17 @@ button {
 	float: right;
 	line-height: 1em;
 }
+
 .edit-mode-on .row { border: 2px dashed #CCC; }
 .edit-mode-on .col { border: 2px dashed #DDD; }
 	.edit-mode-on .inner { padding: 0.6em; }
+header h1 {
+	text-align: middle;
+}
+input[name=site-title] {
+	vertical-align: middle;
+	font-size: 130%;
+}
 
 .button {
 	background: #C44D58;
