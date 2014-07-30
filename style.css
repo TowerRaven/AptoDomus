@@ -293,6 +293,18 @@ ul li, ol li {
 
 /** Widgets */
 .search { padding-bottom: 1.2em; text-align: center; }
+	.search.fullwidth {
+
+	}
+	.search.onethird {
+
+	}
+	.search.onesixth {
+
+	}
+	.search.twothird {
+
+	}
 	#searchform {  }
 	#s {
 		border: none;
@@ -310,6 +322,19 @@ ul li, ol li {
 		color: #FFF;
 		cursor: pointer;
 		margin-left: -0.25em;
+		height: 35px;
+		font-size: 105%;
+	}
+	.searchprovicon {
+		vertical-align: middle;
+	}
+	.providerpick {
+		background: #C44D58;
+		border: none;
+		border-radius: 6px;
+		color: #FFF;
+		cursor: pointer;
+		margin: 0 0.25em;
 		height: 35px;
 		font-size: 105%;
 	}
