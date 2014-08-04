@@ -20,9 +20,12 @@ $data = curl_get_file_contents($url);
 switch($type) {
 	case "news":
 		//Parse data for json encoding
-		$simplexml = simplexml_load_string($data);
-		$json = json_encode($simplexml);
-		echo $json;
+		$simplexml = simplexml_load_string( $data );
+
+		$temp = json_decode( json_encode( $simplexml->channel) );
+
+		echo json_encode( $temp->item );
+		//echo $json;
 		break;
 	case "weather":
 
