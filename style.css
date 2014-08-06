@@ -382,5 +382,19 @@ ul li, ol li {
 			margin: 0 0.3em 0 0.2em;
 		}
 
+.bbcnews .scroll-container {
+	position: relative;
+	height: 1.5em;
+	width: 100%;
+	overflow: hidden;
+}
+
+.bbcnews ul {
+	height: 1.2em;
+}
+.bbcnews li {
+	display: inline-block;
+	padding: 0.1em 0.3em;
+}
 .favourites {  }
 .weather {  }
