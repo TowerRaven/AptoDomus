@@ -397,6 +397,29 @@ ul li, ol li {
 	overflow: auto;
 }
 
+
+.bbcnews .previous_next_button {
+	background: #FFF;
+	border-radius: 5px;
+	box-shadow: #999 0px 1px 2px;
+	cursor: pointer;
+	padding: 0.5em;
+	margin: 0.3em;
+	transition: background 0.3s;
+}
+.bbcnews .previous_next_button:hover {
+	background: #EEE;
+}
+	.bbcnews .previous_next_button img {
+		height: 0.7em;
+	}
+	.bbcnews .previous_button {
+		float: left;
+	}
+	.bbcnews .next_button {
+		float: right;
+	}
+
 .bbcnews ul {
 	clear: both;
 }
