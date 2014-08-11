@@ -382,6 +382,10 @@ ul li, ol li {
 			margin: 0 0.3em 0 0.2em;
 		}
 
+.bbcnews .slide {
+	background: #FFF;
+}
+
 .bbcnews .scroll-container {
 	position: relative;
 	height: 1.5em;
