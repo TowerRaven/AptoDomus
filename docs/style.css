@@ -1,0 +1,33 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
+
+html, body {
+    font-family: 'Open Sans', ariel, sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: #556270;
+}
+
+body {
+    padding: 1em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
+
+h1 { font-size: 1.3em; }
+h2, h3 { font-size: 1.2em }
+h4, h5 { font-size: 1.1em }
+
+#content {
+    clear: both;
+    overflow: auto;
+}
+    #content ol li {
+        display: inline-block;
+        padding: 0.6em;
+        float: left;
+    }
+    #content li.current {
+
+    }

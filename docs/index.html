@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>custom_homepage Documentation</title>
+
+    <link rel="stylesheet" type="text/css" href="../reset.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <script type="text/javascript" src="../lib/inc/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="docs.js"></script>
+    <!--
+    Potential names
+    Aptodomus
+    -->
+</head>
+<body>
+    <article>
+        <header name="top">
+            <h1>custom_homepage Documentation</h1>
+
+            <section name="contents" id="content">
+                <ol>
+                    <li>
+                        <a href="#user">For Users</a>
+                    </li>
+                    <li>
+                        <a href="#devs">For Developers</a>
+                    </li>
+                </ol>
+            </section>
+        </header>
+
+        <section name="user" id="user">
+            <h2>For Users</h2>
+
+            <h3>How it works</h3>
+
+            <p>
+                custom_homepage makes use of a HTML5 standard called localStorage, using your browsers own limited storage space to save your data (note that this varies from browser-to-browser, but generally it starts at 5MB, more than enough for this web app).
+            </p>
+
+            <p>
+                In essence, it means a nearly completely private homepage for you to use; with the exception of a few widgets which require the server to act as a go-between (see the section: 'Features that rely on the server' for more information).
+            </p>
+
+            <h3>Features that rely on the server</h3>
+
+            <p>
+                That said, there are some built in security measures to prevent possible attacks common to most (if not all) modern browsers - in an effort to work within these restrictions, certain widgets do use a little bit of PHP to parse fixed RSS feeds over to JavaScript Object Notation (JSON, which is more safe in these regards over XML).
+            </p>
+
+            <p>
+                The following widgets make use of the server:
+                <ul>
+                    <li>BBC News Feed</li>
+                </ul>
+            </p>
+
+            <h3>Using custom_homepage</h3>
+
+            <h4>Edit mode</h4>
+            <p>
+                To enable editing, hit the toggle option in the top-right of the screen; this will toggle the edit buttons for rows and widgets.
+            </p>
+
+            <h5>Adding and removing rows and widgets</h5>
+            <p>
+                Rows can be added using the 'Add row' button at the bottom of the page; this will create a new row - rows are the horizontal containers and can contain multiple widgets.
+            </p>
+
+            <p>
+                Widgets act like columns, and as such can have different widths of your choosing; there isn't any limit to the number of widgets you can have in a row, though they may become unwieldy  to organise with too many. Each row will have an add widget button with a couple of drop down boxes, consisting of width options and the available widgets.
+            </p>
+
+            <h5>Saving changes</h5>
+            <p>
+                Any modification will trigger a pop-up prompting you to save the page layout; this will save any changes to your browser's local storage. If you change your mind you can simply refresh the page to reload the layout and this will in turn remove the button.
+            </p>
+
+            <h5>Moving/Shuffling widgets</h5>
+            <p>
+                Rows and widgets can be moved around by holding down your mouse button anywhere on them, rows can be moved vertically and widgets can be re-ordered within their containing row. This functionality will only operate while the edit mode is enabled. Like adding or removing rows a pop-up will appear, though upon saving the page will be refreshed to update the saved data properly.
+            </p>
+
+            <h5>Editing widgets</h5>
+            <p>
+                If the widget supports editing you can use the edit button for the specific widget to make the controls for that widget appear.
+            </p>
+
+            <h4>Using locally</h4>
+            <p>
+                If you want to host your own custom_homepage you can find the source code here, this includes a local mode which disables any PHP functionality (should you wish to use a purely file-based version on your own disk, without requiring a server).
+            </p>
+
+        </section>
+
+        <section name="devs" id="devs">
+            <h2>For Developers</h2>
+
+            <h3>Source code</h3>
+            <p>
+                You can grab the sourcecode from ...here..., no building necessary its all HTML, JS, CSS and a splash of PHP.
+            </p>
+
+            <h4>Load order</h4>
+            <p>
+                ...
+            </p>
+
+            <h3>Folder structure</h3>
+            <p>
+                ...
+            </p>
+
+            <h3>Main JavaScript Files</h3>
+            <h4>localStorage.js</h4>
+            <p>
+                ...
+            </p>
+
+            <h4>functions.js</h4>
+            <p>
+                ...
+            </p>
+
+            <h4>widgets.js</h4>
+            <p>
+                ...
+            </p>
+
+            <h3>PHP Files</h3>
+            <h4>rss_bbc.php</h4>
+            <p>
+                ...
+            </p>
+
+        </section>
+
+    </article>
+</body>
+</html>

@@ -382,5 +382,58 @@ ul li, ol li {
 			margin: 0 0.3em 0 0.2em;
 		}
 
+.bbcnews > h2 {
+	padding: 0.3em;
+}
+
+.bbcnews .slide {
+	background: #FFF;
+	width: 100%;
+}
+
+.bbcnews .scroll-container {
+	position: relative;
+	height: 1.5em;
+	width: 100%;
+	overflow: hidden;
+}
+
+.newscarousel {
+	clear: both;
+	overflow: auto;
+}
+
+
+.bbcnews .previous_next_button {
+	background: #FFF;
+	border-radius: 5px;
+	box-shadow: #999 0px 1px 2px;
+	cursor: pointer;
+	padding: 0.5em;
+	margin: 0.3em;
+	transition: background 0.3s;
+}
+.bbcnews .previous_next_button:hover {
+	background: #EEE;
+}
+	.bbcnews .previous_next_button img {
+		height: 0.7em;
+	}
+	.bbcnews .previous_button {
+		float: left;
+	}
+	.bbcnews .next_button {
+		float: right;
+	}
+
+.bbcnews ul {
+	clear: both;
+}
+.bbcnews li {
+	display: inline-block;
+	padding: 0.1em 0.3em;
+	width: 30%;
+	float: left;
+}
 .favourites {  }
 .weather {  }
