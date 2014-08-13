@@ -7,13 +7,17 @@ html, body {
     color: #556270;
 }
 
+body {
+    padding: 1em;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
 }
 
-h1 { font-size: 1.2em; }
-h2, h3 { font-size: 1.1em }
-h4, h5 { font-size: 1.05em }
+h1 { font-size: 1.3em; }
+h2, h3 { font-size: 1.2em }
+h4, h5 { font-size: 1.1em }
 
 #content {
     clear: both;

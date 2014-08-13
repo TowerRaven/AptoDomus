@@ -21,10 +21,10 @@
             <section name="contents" id="content">
                 <ol>
                     <li>
-                        <a href="#user">User Documentation</a>
+                        <a href="#user">For Users</a>
                     </li>
                     <li>
-                        <a href="#devs">Developer Documentation</a>
+                        <a href="#devs">For Developers</a>
                     </li>
                 </ol>
             </section>
@@ -46,7 +46,7 @@
             <h3>Features that rely on the server</h3>
 
             <p>
-                That said, there are some built in security measures to prevent certain attacks common to most (if not all) modern browsers - in an effort to work within these restrictions, certain widgets do use a little bit of PHP to parse fixed RSS feeds over to JavaScript Object Notation (JSON, which is more safe in these regards over XML).
+                That said, there are some built in security measures to prevent possible attacks common to most (if not all) modern browsers - in an effort to work within these restrictions, certain widgets do use a little bit of PHP to parse fixed RSS feeds over to JavaScript Object Notation (JSON, which is more safe in these regards over XML).
             </p>
 
             <p>
@@ -58,34 +58,38 @@
 
             <h3>Using custom_homepage</h3>
 
-            <h4>Adding rows</h4>
+            <h4>Edit mode</h4>
             <p>
-                ...
+                To enable editing, hit the toggle option in the top-right of the screen; this will toggle the edit buttons for rows and widgets.
             </p>
 
-            <h4>Adding widgets</h4>
+            <h5>Adding and removing rows and widgets</h5>
             <p>
-                ...
+                Rows can be added using the 'Add row' button at the bottom of the page; this will create a new row - rows are the horizontal containers and can contain multiple widgets.
             </p>
 
-            <h4>Saving changes</h4>
             <p>
-                ...
+                Widgets act like columns, and as such can have different widths of your choosing; there isn't any limit to the number of widgets you can have in a row, though they may become unwieldy  to organise with too many. Each row will have an add widget button with a couple of drop down boxes, consisting of width options and the available widgets.
             </p>
 
-            <h4>Moving/Shuffling widgets</h4>
+            <h5>Saving changes</h5>
             <p>
-                ...
+                Any modification will trigger a pop-up prompting you to save the page layout; this will save any changes to your browser's local storage. If you change your mind you can simply refresh the page to reload the layout and this will in turn remove the button.
             </p>
 
-            <h4>Editing widgets</h4>
+            <h5>Moving/Shuffling widgets</h5>
             <p>
-                ...
+                Rows and widgets can be moved around by holding down your mouse button anywhere on them, rows can be moved vertically and widgets can be re-ordered within their containing row. This functionality will only operate while the edit mode is enabled. Like adding or removing rows a pop-up will appear, though upon saving the page will be refreshed to update the saved data properly.
+            </p>
+
+            <h5>Editing widgets</h5>
+            <p>
+                If the widget supports editing you can use the edit button for the specific widget to make the controls for that widget appear.
             </p>
 
             <h4>Using locally</h4>
             <p>
-                ...
+                If you want to host your own custom_homepage you can find the source code here, this includes a local mode which disables any PHP functionality (should you wish to use a purely file-based version on your own disk, without requiring a server).
             </p>
 
         </section>
