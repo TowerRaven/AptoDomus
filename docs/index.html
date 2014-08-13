@@ -2,22 +2,125 @@
 <html>
 <head>
     <title>Custom Homepage Documentation</title>
+
+
 </head>
 <body>
     <article>
-        <header>
-            <h1>Custom Homepage Documentation</h1>
+        <header name="top">
+            <h1>custom_homepage Documentation</h1>
+
+            <section name="contents" id="content">
+                <ol>
+                    <li>
+                        <a href="#user">User Documentation</a>
+                    </li>
+                    <li>
+                        <a href="#devs">Developer Documentation</a>
+                    </li>
+                </ol>
+            </section>
         </header>
 
-        <section id="user">
-            <h2>User Documentation</h2>
+        <section name="user" id="user">
+            <h2>For Users</h2>
 
-            
+            <h3>How it works</h3>
+
+            <p>
+                custom_homepage makes use of a HTML5 standard called localStorage, using your browsers own limited storage space to save your data (note that this varies from browser-to-browser, but generally it starts at 5MB, more than enough for this web app).
+            </p>
+
+            <p>
+                In essence, it means a nearly completely private homepage for you to use; with the exception of a few widgets which require the server to act as a go-between (see the section: 'Features that rely on the server' for more information).
+            </p>
+
+            <h3>Features that rely on the server</h3>
+
+            <p>
+                That said, there are some built in security measures to prevent certain attacks common to most (if not all) modern browsers - in an effort to work within these restrictions, certain widgets do use a little bit of PHP to parse fixed RSS feeds over to JavaScript Object Notation (JSON, which is more safe in these regards over XML).
+            </p>
+
+            <p>
+                The following widgets make use of the server:
+                <ul>
+                    <li>BBC News Feed</li>
+                </ul>
+            </p>
+
+            <h3>Using custom_homepage</h3>
+
+            <h4>Adding rows</h4>
+            <p>
+                ...
+            </p>
+
+            <h4>Adding widgets</h4>
+            <p>
+                ...
+            </p>
+
+            <h4>Saving changes</h4>
+            <p>
+                ...
+            </p>
+
+            <h4>Moving/Shuffling widgets</h4>
+            <p>
+                ...
+            </p>
+
+            <h4>Editing widgets</h4>
+            <p>
+                ...
+            </p>
+
+            <h4>Using locally</h4>
+            <p>
+                ...
+            </p>
+
         </section>
 
-        <section id="devs">
-            <h2>Developer Documentation</h2>
+        <section name="devs" id="devs">
+            <h2>For Developers</h2>
 
+            <h3>Source code</h3>
+            <p>
+                You can grab the sourcecode from ...here..., no building necessary its all HTML, JS, CSS and a splash of PHP.
+            </p>
+
+            <h4>Load order</h4>
+            <p>
+                ...
+            </p>
+
+            <h3>Folder structure</h3>
+            <p>
+                ...
+            </p>
+
+            <h3>Main JavaScript Files</h3>
+            <h4>localStorage.js</h4>
+            <p>
+                ...
+            </p>
+
+            <h4>functions.js</h4>
+            <p>
+                ...
+            </p>
+
+            <h4>widgets.js</h4>
+            <p>
+                ...
+            </p>
+
+            <h3>PHP Files</h3>
+            <h4>rss_bbc.php</h4>
+            <p>
+                ...
+            </p>
 
         </section>
 
