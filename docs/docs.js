@@ -1,22 +1,21 @@
 $(document).ready(function() {
-    if(window.location.hash != "") {
-        var linkhash = window.location.hash;
-        linkhash = linkhash.replace('#', '');
+    var linkhash = window.location.hash;
 
-        switch(linkhash) {
-            case "user":
-
-                break;
-            case "devs":
-
-                break;
-            default:
-
-                break;
-        }
-    } else {
-        //TODO default stuff
-    }
+    switch(linkhash) {
+        case "#user":
+            $('#user').show();
+            $('#devs').hide();
+            break;
+        case "#devs":
+            $('#user').hide();
+            $('#devs').show();
+            break;
+        default:
+            window.location.hash = "#user";
+            $('#user').show();
+            $('#devs').hide();
+            break;
+    };
 
     $('#user_link').on('click', function(event) {
         event.preventDefault();
