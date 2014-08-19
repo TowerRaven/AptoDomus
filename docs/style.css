@@ -12,14 +12,14 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-weight: bold;
+    font-weight: 400;
     margin-bottom: 0.5em;
 }
 
 h1 { font-size: 1.3em; }
 h2, h3 { font-size: 1.2em }
     h2 { margin: 1em 0 0.5em; }
-    h3 { margin: 0.5em 0 0.5em -1em; }
+    h3 { margin: 0.5em 0 0.5em -1em; transform: skew(-5deg, 0deg); }
 h4, h5 { font-size: 1.1em }
 
 article {
@@ -57,21 +57,19 @@ nav ul {
 }
     #content ol li {
         display: inline-block;
-        padding: 0.6em;
+        padding: 0.6em 0.3em;
         float: left;
     }
     #content li.current {
 
     }
 
-#user_link, #devs_link {
+.nav_button {
     background: #C44D58;
     border-radius: 5px;
     color: #FFF;
     display: inline-block;
-    padding: 0.6em;
+    font-weight: 400;
+    padding: 0.4em;
     text-decoration: none;
 }
-    #user_link:hover, #devs_link:hover {
-
-    }
