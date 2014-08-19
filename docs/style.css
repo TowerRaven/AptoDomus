@@ -35,6 +35,21 @@ section {
 p {
     margin-bottom: 1em;
 }
+strong {
+    font-weight: bold;
+}
+
+ul {
+    list-style: circle;
+}
+ul li {
+    margin: 0 0 0.2em 1.6em;
+}
+
+nav ul {
+    list-style: none;
+    margin: none;
+}
 
 #content {
     clear: both;
