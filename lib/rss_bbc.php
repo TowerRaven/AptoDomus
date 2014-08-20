@@ -36,11 +36,15 @@ switch($type) {
 		//Get data
 		$url = "http://open.live.bbc.co.uk/weather/feeds/en/".$location;
 
-		$data_obs = curl_get_file_contents($url.'/observations.rss');
+		$data_obsrv = curl_get_file_contents($url.'/observations.rss');
+		$sxml_obsrv = simplexml_load_string( $data_obsrv );
 
 		$data_3day = curl_get_file_contents($url.'/3dayforecast.rss');
+		$sxml_3day = simplexml_load_string( $data_3day );
 
-		echo json_encode( $data_obs );
-		echo json_encode( $data_3day );
+		$data["observations"] = $sxml_obsrv;
+		$data["3dayforecast"] = $sxml_3day;
+
+		echo json_encode( $data );
 		break;
 }
