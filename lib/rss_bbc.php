@@ -42,8 +42,8 @@ switch($type) {
 		$data_3day = curl_get_file_contents($url.'/3dayforecast.rss');
 		$sxml_3day = simplexml_load_string( $data_3day );
 
-		$data["observations"] = $sxml_obsrv;
-		$data["3dayforecast"] = $sxml_3day;
+		$data["observations"] = $sxml_obsrv->channel;
+		$data["3dayforecast"] = $sxml_3day->channel;
 
 		echo json_encode( $data );
 		break;
