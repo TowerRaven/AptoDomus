@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>custom_homepage Documentation</title>
+    <title>AptoDomus Documentation</title>
 
     <link rel="stylesheet" type="text/css" href="../reset.css" />
     <link rel="stylesheet" type="text/css" href="style.css" />
@@ -16,116 +16,176 @@
 <body>
     <article>
         <header name="top">
-            <h1>custom_homepage Documentation</h1>
+            <h1>AptoDomus Documentation</h1>
 
-            <section name="contents" id="content">
+            <nav name="contents" id="content">
                 <ol>
                     <li>
-                        <a href="#user">For Users</a>
+                         <a id="app_link" class="nav_button" href="./">Back to App</a>
                     </li>
                     <li>
-                        <a href="#devs">For Developers</a>
+                        <a id="about_link" class="nav_button" href="../about.html">About</a>
+                    </li>
+                    <li>
+                        <a id="user_link" class="nav_button" href="#user">User Documentation</a>
+                    </li>
+                    <li>
+                        <a id="devs_link" class="nav_button" href="#devs">Developer Documentation</a>
                     </li>
                 </ol>
-            </section>
+            </nav>
         </header>
 
         <section name="user" id="user">
-            <h2>For Users</h2>
+            <h2>User Documentation</h2>
 
             <h3>How it works</h3>
 
             <p>
-                custom_homepage makes use of a HTML5 standard called localStorage, using your browsers own limited storage space to save your data (note that this varies from browser-to-browser, but generally it starts at 5MB, more than enough for this web app).
+                AptoDomus makes use of a HTML5 standard called localStorage,
+                using your browser's own limited storage space to save your data
+                (note that this varies from browser-to-browser, but generally it
+                starts at 5MB, more than enough for this web app).
             </p>
 
             <p>
-                In essence, it means a nearly completely private homepage for you to use; with the exception of a few widgets which require the server to act as a go-between (see the section: 'Features that rely on the server' for more information).
+                In essence, it means a nearly completely private homepage for
+                you to use; with the exception of a few widgets which require
+                the server to act as a go-between (see the below section:
+                'Features that rely on the server' for more information).
             </p>
 
             <h3>Features that rely on the server</h3>
 
             <p>
-                That said, there are some built in security measures to prevent possible attacks common to most (if not all) modern browsers - in an effort to work within these restrictions, certain widgets do use a little bit of PHP to parse fixed RSS feeds over to JavaScript Object Notation (JSON, which is more safe in these regards over XML).
+                In most modern browsers there are measures taken to prevent
+                common attack vectors from being plausible, AptoDomus is most
+                affected by protection again Cross-site scripting (XSS) - in
+                an effort to work within these restrictions, certain widgets
+                do use a little bit of PHP on the server to parse fixed RSS
+                feeds over to JavaScript Object Notation which is then used by
+                AptoDomus to render that information.
             </p>
 
             <p>
-                The following widgets make use of the server:
+                The following widget(s) are affected by this:
                 <ul>
                     <li>BBC News Feed</li>
                 </ul>
             </p>
 
-            <h3>Using custom_homepage</h3>
+            <h3>Using AptoDomus</h3>
 
             <h4>Edit mode</h4>
             <p>
-                To enable editing, hit the toggle option in the top-right of the screen; this will toggle the edit buttons for rows and widgets.
+                To enable editing, hit the toggle option in the top-right of the
+                screen; this will toggle the edit buttons for rows and widgets.
             </p>
 
             <h5>Adding and removing rows and widgets</h5>
             <p>
-                Rows can be added using the 'Add row' button at the bottom of the page; this will create a new row - rows are the horizontal containers and can contain multiple widgets.
+                Rows can be added using the 'Add row' button at the bottom of
+                the page; this will create a new row - rows are the horizontal
+                containers and can contain multiple widgets.
             </p>
 
             <p>
-                Widgets act like columns, and as such can have different widths of your choosing; there isn't any limit to the number of widgets you can have in a row, though they may become unwieldy  to organise with too many. Each row will have an add widget button with a couple of drop down boxes, consisting of width options and the available widgets.
+                Widgets act like columns, and as such can have different widths
+                of your choosing; there isn't any limit to the number of widgets
+                you can have in a row, though they may become unwieldy  to
+                organise with too many. Each row will have an add widget button
+                with a couple of drop down boxes, consisting of width options
+                and the available widgets.
             </p>
 
             <h5>Saving changes</h5>
             <p>
-                Any modification will trigger a pop-up prompting you to save the page layout; this will save any changes to your browser's local storage. If you change your mind you can simply refresh the page to reload the layout and this will in turn remove the button.
+                Any modification will trigger a pop-up prompting you to save the
+                page layout; this will save any changes to your browser's local
+                storage. If you change your mind you can simply refresh the page
+                to reload the original layout and this will in turn remove the
+                button.
             </p>
 
             <h5>Moving/Shuffling widgets</h5>
             <p>
-                Rows and widgets can be moved around by holding down your mouse button anywhere on them, rows can be moved vertically and widgets can be re-ordered within their containing row. This functionality will only operate while the edit mode is enabled. Like adding or removing rows a pop-up will appear, though upon saving the page will be refreshed to update the saved data properly.
+                Rows and widgets can be moved around by holding down your mouse
+                button anywhere on them, rows can be moved vertically and
+                widgets can be re-ordered within their containing row. This
+                functionality will only be available while the edit mode is
+                enabled. Like adding or removing rows a pop-up will appear,
+                though upon saving the page will be refreshed to update the
+                saved data properly.
             </p>
 
             <h5>Editing widgets</h5>
             <p>
-                If the widget supports editing you can use the edit button for the specific widget to make the controls for that widget appear.
+                If the widget supports editing you can use the edit button for
+                the specific widget to make the controls for that widget appear.
             </p>
 
             <h4>Using locally</h4>
             <p>
-                If you want to host your own custom_homepage you can find the source code here, this includes a local mode which disables any PHP functionality (should you wish to use a purely file-based version on your own disk, without requiring a server).
+                If you want to host your own AptoDomus you can ...find the
+                source code here..., this includes a local mode which disables
+                any PHP functionality (should you wish to use a purely
+                file-based version on your own disk, without requiring a server).
             </p>
 
         </section>
 
         <section name="devs" id="devs">
-            <h2>For Developers</h2>
+            <h2>Developer Documentation</h2>
 
             <h3>Source code</h3>
             <p>
-                You can grab the sourcecode from ...here..., no building necessary its all HTML, JS, CSS and a splash of PHP.
+                You can grab the sourcecode from ...here..., no building
+                 necessary its all HTML, JS, CSS and a splash of PHP.
             </p>
 
-            <h4>Load order</h4>
+            <h3>Load order</h3>
             <p>
-                ...
+                All third party libraries are called upon first in index.html,
+                followed by homepage.js; all files are loaded and upon document
+                 ready state homepage.js initializes the first steps.
             </p>
 
             <h3>Folder structure</h3>
             <p>
-                ...
+                The homepage.js file is the only file outside of the /lib/
+                directory, otherwise within /lib/ there is an /inc/ folder (for
+                any third party libraries/dependencies) and within the main
+                /lib/ folder itself the main files for functionality, including
+                any .php files that may be required.
             </p>
 
             <h3>Main JavaScript Files</h3>
             <h4>localStorage.js</h4>
             <p>
-                ...
+                Contains the main getter and setter of localStorage, and some
+                 basic loading functionality for the site itself. It will
+                 populate the window variables: userversion, list (which
+                 contains the rows and columns arrays), and the title variable.
+            </p>
+
+            <p>
+                localStorage.js also houses the resetLocalStorage function used
+                for the button with the relevant name (in the homepage footer);
+                though does not bind it. Finally it also includes a function to
+                check if the html5 localStorage is supported within the browser.
             </p>
 
             <h4>functions.js</h4>
             <p>
-                ...
+                Contains the vast majority of functionality for the rows,
+                columns (widgets), and binds. Also includes most oft-used
+                functions at the top of the file.
             </p>
 
             <h4>widgets.js</h4>
             <p>
-                ...
+                Features the widget registry object and its methods; acts like a
+                collection of hooks to call upon certain aspects thoughout runtime.
             </p>
 
             <h3>PHP Files</h3>

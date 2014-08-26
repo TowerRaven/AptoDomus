@@ -12,12 +12,44 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-weight: bold;
+    font-weight: 400;
+    margin-bottom: 0.5em;
 }
 
 h1 { font-size: 1.3em; }
 h2, h3 { font-size: 1.2em }
+    h2 { margin: 1em 0 0.5em; }
+    h3 { margin: 0.5em 0 0.5em -1em; transform: skew(-5deg, 0deg); }
 h4, h5 { font-size: 1.1em }
+
+article {
+    margin: 0 auto;
+    width: 80%;
+        max-width: 960px;
+}
+
+section {
+    border-top: 1px dashed #DDD;
+}
+
+p {
+    margin-bottom: 1em;
+}
+strong {
+    font-weight: bold;
+}
+
+ul {
+    list-style: circle;
+}
+ul li {
+    margin: 0 0 0.2em 1.6em;
+}
+
+nav ul {
+    list-style: none;
+    margin: none;
+}
 
 #content {
     clear: both;
@@ -25,9 +57,19 @@ h4, h5 { font-size: 1.1em }
 }
     #content ol li {
         display: inline-block;
-        padding: 0.6em;
+        padding: 0.6em 0.3em;
         float: left;
     }
     #content li.current {
 
     }
+
+.nav_button {
+    background: #C44D58;
+    border-radius: 5px;
+    color: #FFF;
+    display: inline-block;
+    font-weight: 400;
+    padding: 0.4em;
+    text-decoration: none;
+}
