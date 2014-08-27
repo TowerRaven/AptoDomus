@@ -12,4 +12,4 @@ Coming soon.
 
 ## Source Code
 The latest version can be found on the
-[develop-0.2](https://github.com/TowerRaven/AptoDomus/tree/develop-0.2) branch.
+[master branch](https://github.com/TowerRaven/AptoDomus).
