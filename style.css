@@ -71,6 +71,23 @@ button {
 		font-weight: bold;
 		margin-bottom: 0.5em;
 	}
+
+
+.dialogue {
+	border-radius: 3px;
+	box-shadow: red 3px 0px 0px;
+	font-size: 0.9em;
+	background: #FFF;
+	height: 300px;
+	width: 320px;
+	padding: 20px;
+	position: fixed;
+	margin-left: -160px;
+	margin-top: -150px;
+	left: 50%;
+	top: 50%;
+	z-index: 8000;
+}
 #js-notice { z-index: 10000; }
 #ls-notice { z-index: 9999; }
 
