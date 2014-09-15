@@ -72,7 +72,6 @@ button {
 		margin-bottom: 0.5em;
 	}
 
-
 .dialogue {
 	border-radius: 3px;
 	box-shadow: red 3px 0px 0px;
@@ -90,6 +89,35 @@ button {
 }
 #js-notice { z-index: 10000; }
 #ls-notice { z-index: 9999; }
+
+#settings {
+
+}
+	#usedspace {
+		background-color: #EEE;
+		height: 1.5em;
+		line-height: 1.5em;
+		width: 300px;
+		padding: 0.1em;
+		font-weight: bold;
+		text-align: center;
+	}
+	/*
+	Note: clip: rect(top, right, bottom, left)
+	*/
+	.usedspacebar {
+		background-color: #F55;
+		color: #FFF;
+		display: block;
+		float: left;
+		height: 1.5em;
+		line-height: 1.5em;
+		text-align: center;
+		max-width: 300px;
+		width: 300px;
+		z-index: 5;
+		position: absolute;
+	}
 
 /** Layout */
 #wrap > header {
