@@ -33,6 +33,12 @@ switch($type) {
 	case "weather":
 		$location = $_GET['location'];
 
+		if(preg_match('/[0-9]*/g', $location) == 0)
+		{
+			echo '{"error": true, "status": "Location code not valid."}';
+			break;
+		}
+
 		//Get data
 		$url = "http://open.live.bbc.co.uk/weather/feeds/en/".$location;
 
