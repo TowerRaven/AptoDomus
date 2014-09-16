@@ -24,6 +24,8 @@ $(document).ready(function() {
 	 */
 	initLocalStorage(home_version);
 
+	initDialogues();
+
 	/**
 	 * initPage generates the layout and populates it with widgets
 	 */
