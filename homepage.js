@@ -24,8 +24,6 @@ $(document).ready(function() {
 	 */
 	initLocalStorage(home_version);
 
-	console.log(logUsage());
-
 	/**
 	 * initPage generates the layout and populates it with widgets
 	 */
@@ -46,4 +44,6 @@ $(document).ready(function() {
 		}).slideDown();
 		console.log('Urgh, so satisfying :Q');
 	});
+
+	outputUsage();
 });
