@@ -87,6 +87,9 @@ button {
 	top: 50%;
 	z-index: 8000;
 }
+	.second-level {
+		z-index: 8001;
+	}
 	.dialogue h2 {
 		clear: both;
 		padding: 0.2em 0 0.2em 0;
@@ -94,16 +97,25 @@ button {
 	.dialogue h3 {
 		margin: 0.9em 0 0.6em 0;
 	}
-	.dialogue .close {
+	.dialogue-button {
 		background: transparent;
 		border: none;
 		cursor: pointer;
 		float: right;
 	}
-	.dialogue .close img {
+	.dialogue-button.back {
+		float: left;
+	}
+	.dialogue-button img {
 		width: 1.2em;
 		height: 1.2em;
 	}
+
+#thesettings {
+	max-width: 310px;
+	max-height: 220px;
+}
+
 #js-notice { z-index: 10000; }
 #ls-notice { z-index: 9999; }
 
