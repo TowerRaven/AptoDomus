@@ -8,8 +8,16 @@ stylish and easy on the eye.
 It is licenced under the **GNU GPL V2**.
 
 ## Live Site
-Coming soon.
+Coming soon*.
 
 ## Source Code
 The latest version can be found on the
 [master branch](https://github.com/TowerRaven/AptoDomus).
+
+## Changelog
+
+### Alpha 2014-10
+ * [New] Settings dialogue
+  * Backup and Restore your settings
+  * View localStorage usage
+ * [Change] Reset localStorage now under settings dialogue

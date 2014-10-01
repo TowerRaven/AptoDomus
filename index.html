@@ -37,6 +37,47 @@
 					and have local storage available before trying to use me.</p>
 			</div>
 
+			<div id="settings" class="dialogue hidden">
+				<h2>Homepage Settings <button class="dialogue-button close"><img src="icons/x-slim.svg" alt="Close" title="Close Settings" /></button></h2>
+					<h3>Restore Defaults</h3>
+					<p>
+						<button type="button" class="button" name="resetls">Reset Local Storage</button>
+					</p>
+					<h3>Backup &amp; Restore Settings</h3>
+					<p>
+
+						<button id="button_backupsettings" class="button">Backup Settings</button>
+						<button id="button_restoresettings" class="button">Restore Settings</button>
+					</p>
+
+					<h3>Used Storage Space</h3>
+					<p>
+						* Note: this is a guideline, your browser may allow more than is suggested here.<br />
+
+						<div id="usedspace">
+							<span class="usedspacebar" style="clip: rect(0px,300px,22px,0px);"><span class="usedspaceval">5</span> / 5120 KB</span>
+							<span class="usedspaceval">5</span> / 5120 KB
+						</div>
+					</p>
+			</div>
+
+			<div id="backupsettings" class="dialogue hidden second-level overlay-dialogue">
+				<h2><button class="dialogue-button back"><img src="icons/back.svg" /></button> Backup Settings</h2>
+				<textarea id="thesettings" style="width: 310px; height: 210px;"></textarea>
+				<p>
+					Click on the text above and hit Ctrl+C to copy (some devices may have alternative methods).
+				</p>
+			</div>
+
+			<div id="restoresettings" class="dialogue hidden second-level overlay-dialogue">
+				<h2><button class="dialogue-button back"><img src="icons/back.svg" /></button> Restore Settings</h2>
+				<textarea id="newsettings" style="width: 310px; height: 210px;"></textarea>
+				<button id="restoresettings-go" type="button" class="button" style="float: right; margin-left: 0.5em;">Restore</button>
+				<p>
+					Paste (Ctrl+P) your settings in the area above and hit "Restore".
+				</p>
+			</div>
+
 			<header>
 				<h1 id="site-title"></h1>
 				<input id="sitetitleinput" type="text" name="site-title" placeholder="Name me!" style="display: none;" />
@@ -44,9 +85,9 @@
 				<div id="toolbar">
 					<ul>
 						<li id="editswitch">Edit Mode: <input type="checkbox" id="edit" name="edit" class="switch" /></li>
-						<li id="settings" class="button">Settings</li>
-						<li id="themes" class="button">Themes</li>
-						<li id="about" class="button">About</li>
+						<li id="button_settings" class="button">Settings</li>
+						<li id="button_themes" class="button">Themes</li>
+						<li id="button_about" class="button">About</li>
 					</ul>
 				</div>
 			</header>
@@ -58,7 +99,7 @@
 			</div>
 
 			<footer>
-				<button style="float: right;" type="button" class="button" name="resetls">Reset Local Storage</button>
+
 			</footer>
 
 			<div id="data-manager" class="overlay bottom-side" style="display: none;">
