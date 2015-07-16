@@ -11,11 +11,19 @@
  */
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
+html, body {
+	max-width: 100%;
+	overflow-x: hidden;
+}
 
 html, body, input {
 	font-family: 'Open Sans', ariel, sans-serif;
 	font-weight: 300;
 	color: #556270;
+}
+
+#wrap {
+	overflow: auto;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -158,14 +166,81 @@ button {
 #wrap > header h1 { float: left; }
 #wrap > footer {  }
 
-#toolbar { float: right; }
+.toolbarbtn {
+  float: right;
+  background: transparent;
+  border: none;
+}
+
+#toolbar .toolbarbtn {
+  float: left;
+  width: 100%;
+  margin-top: 1em;
+}
+  #toolbar .toolbarbtn .svg path {
+	fill: #ffffff;
+  }
+  #toolbar .toolbarbtn .svg {
+    transform: rotate(-450deg);
+    transition: transform 1s;
+  }
+
+#toolbar {
+  background: #333;
+  color: #FFF;
+  position: absolute;
+  right: 0px;
+  height: 100%;
+  top: 0px;
+  z-index: 100;
+  padding: 0;
+  width: 180px;
+  transition: width 1s, color 0.3s;
+  transition-delay: color 1s;
+}
 	#toolbar ul {
+		color: #FFF;
 		margin: 0;
-		padding: 0;
+		padding: 1em;
+		transition: color .3s;
+		visibility: visible;
 	}
 	#toolbar ul li {
-		display: inline-block;
+		color: rgba(255, 255, 255, 1);
+		transition: color .3s;
+		transition-delay: 1s;
+		visibility: visible;
 	}
+    #toolbar .button {
+      margin-bottom: 0.4em;
+    }
+    #editswitch {
+      margin: 0.2em 0em;
+    }
+
+  #toolbar.closed .toolbarbtn .svg {
+    transform: rotate(0deg);
+    transition: transform 1s;
+    transition-delay: .3s;
+  }
+#toolbar.closed { width: 44px; padding: 0; transition: width 1s; transition-delay: .3s; }
+#toolbar.closed ul { visibility: hidden; transition: all .3s; }
+#toolbar.closed ul li { 
+	background: transparent;
+	color: rgba(255, 255, 255, 0);
+	transition: all .3s;
+	padding: 0;
+	margin: 0;
+	overflow: none;
+	box-shadow: none;
+	width: 0px;
+	line-height: 0px;
+	visibility: hidden;
+}
+#toolbar.closed ul li input[type=checkbox] {
+	display: none;
+	transition: all .3s;
+}
 
 #content {
 	padding: 0em 0.6em 1.2em 0.6em;
@@ -185,7 +260,7 @@ button {
 	overflow: auto;
 
 	border-radius: 3px;
-	border: 2px dashed transparent;
+	border: 1px dashed transparent;
 	text-align: right;
 	transition: border 0.4s;
 }
@@ -205,7 +280,7 @@ button {
 	margin: 0.6em;
 
 	border-radius: 3px;
-	border: 2px dashed transparent;
+	border: 1px dashed transparent;
 	transition: border 0.4s;
 }
 
@@ -233,8 +308,8 @@ button {
 	line-height: 1em;
 }
 
-.edit-mode-on .row { border: 2px dashed #CCC; }
-.edit-mode-on .col { border: 2px dashed #DDD; }
+.edit-mode-on .row { border: 1px dashed #CCC; }
+.edit-mode-on .col { border: 1px dashed #DDD; }
 	.edit-mode-on .inner { padding: 0.6em; }
 header h1 {
 	text-align: middle;
@@ -298,8 +373,8 @@ input[name=site-title] {
 }
 .submitadd, .submitremoval {
 	border: none;
-	border-radius: 10px;
-	box-shadow: #999 0 2px 0 -1px;
+	border-radius: 3px;
+	box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.7);
 	cursor: pointer;
 	height: 20px;
 	line-height: 20px;
@@ -511,3 +586,8 @@ ul li, ol li {
 }
 .favourites {  }
 .weather {  }
+.clock-inner {
+	font-size: 4em;
+	text-align: center;
+	padding: 0.6em 0;
+}

@@ -47,5 +47,13 @@ $(document).ready(function() {
 		console.log('Urgh, so satisfying :Q');
 	});
 
-	outputUsage();
+    $('.toolbarbtn').on('click', function() {
+        $('#toolbar').toggleClass('closed');
+        console.log('Whoee, beautiful transitions.');
+    });
+
+    //FIXME
+	//outputUsage();
+
+
 });

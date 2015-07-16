@@ -15,7 +15,7 @@ padding: 0;
 /*-- outer containers --*/
 /* -----------------------------------*/
 
-/*-- the most outer container rendered by JS 
+/*-- the most outer container rendered by JS
 Contains .slides .slide_content_... .persistent_content and controls that have "no_control_set" --*/
 
 .agile_carousel {
@@ -55,13 +55,13 @@ z-index: 4000;
 /*-- default styles for all button containers --*/
 
 .agile_carousel .button_container {
-z-index: 5000;	
+z-index: 5000;
 }
 
 /*-- default style for controls whose trigger type is "hover" --*/
 
 .agile_carousel .ac_hover {
-cursor:text;	
+cursor:text;
 }
 
 /*-- default style for controls which are currently selected
@@ -70,7 +70,7 @@ such as the current slide number --*/
 .agile_carousel .ac_selected {
 }
 
-/*-- default style for disabled controls 
+/*-- default style for disabled controls
 "previous" and "next" controls may be disabled near the first/last slide --*/
 
 .agile_carousel .ac_disabled {
@@ -195,7 +195,7 @@ margin-top: 28px;
 /*-- individual slides --*/
 
 #multiple_slides_visible .slide_inner {
-text-align: center;	
+text-align: center;
 }
 #multiple_slides_visible .slide_inner {
 overflow: hidden;
@@ -285,7 +285,7 @@ background-image: url(../images/sprite_ac_hover.png);
 #multiple_slides_visible .control_set_1 .ac_disabled {
 background-image: url(../images/sprite_ac_disabled.png);
 }
-		
+
 /*-- .control_set_2 - includes: group_numbered_buttons --*/
 
 #multiple_slides_visible .control_set_2 {
