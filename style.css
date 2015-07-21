@@ -16,6 +16,10 @@ html, body {
 	overflow-x: hidden;
 }
 
+body {
+	padding-right: 44px;
+}
+
 html, body, input {
 	font-family: 'Open Sans', ariel, sans-serif;
 	font-weight: 300;
@@ -188,7 +192,7 @@ button {
 #toolbar {
   background: #333;
   color: #FFF;
-  position: absolute;
+  position: fixed;
   right: 0px;
   height: 100%;
   top: 0px;
@@ -285,7 +289,6 @@ button {
 }
 
 .fullwidth {
-	width: 96.5%;
 	clear: both;
 }
 .onethird {
@@ -552,6 +555,15 @@ ul li, ol li {
 	overflow: auto;
 }
 
+.newscarousel .slides {
+	clear: both;
+}
+
+.newscarousel .slide {
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
 
 .bbcnews .previous_next_button {
 	background: #FFF;
@@ -584,10 +596,43 @@ ul li, ol li {
 	width: 30%;
 	float: left;
 }
+.bbcnews li p {
+	text-overflow: ellipsis;
+}
 .favourites {  }
 .weather {  }
-.clock-inner {
+.clock-inner .clock-date {
+	font-size: 1.5em;
+	text-align: center;
+	padding: 0.6em 0 0;
+}
+.clock-inner .clock-time {
 	font-size: 4em;
 	text-align: center;
-	padding: 0.6em 0;
+	padding: 0.1em 0;
+}
+
+@media screen and (max-width: 850px) {
+	.onethird {
+		float: none;
+		width: auto;
+	}
+	
+	.twothird {
+		float: none;
+		width: auto;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.bbcnews .agile_carousel {
+		height: 475px; 
+	}
+	.bbcnews .slides {
+		height: 435px;
+	}
+	.bbcnews .slide {
+		clear: both;
+		width: auto;
+	}
 }
