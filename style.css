@@ -196,7 +196,7 @@ button {
   right: 0px;
   height: 100%;
   top: 0px;
-  z-index: 100;
+  z-index: 1000;
   padding: 0;
   width: 180px;
   transition: width 1s, color 0.3s;
@@ -211,6 +211,7 @@ button {
 	}
 	#toolbar ul li {
 		color: rgba(255, 255, 255, 1);
+		width: 135px;
 		transition: color .3s;
 		transition-delay: 1s;
 		visibility: visible;
@@ -227,9 +228,13 @@ button {
     transition: transform 1s;
     transition-delay: .3s;
   }
-#toolbar.closed { width: 44px; padding: 0; transition: width 1s; transition-delay: .3s; }
+#toolbar.closed {
+	width: 44px; padding: 0;
+	/*transition: width 1s, height .0s;
+	transition-delay: .3s; */
+}
 #toolbar.closed ul { visibility: hidden; transition: all .3s; }
-#toolbar.closed ul li { 
+#toolbar.closed ul li {
 	background: transparent;
 	color: rgba(255, 255, 255, 0);
 	transition: all .3s;
@@ -237,7 +242,6 @@ button {
 	margin: 0;
 	overflow: none;
 	box-shadow: none;
-	width: 0px;
 	line-height: 0px;
 	visibility: hidden;
 }
@@ -534,71 +538,130 @@ ul li, ol li {
 			margin: 0 0.3em 0 0.2em;
 		}
 
+
 .bbcnews > h2 {
 	padding: 0.3em;
 }
 
-.bbcnews .slide {
-	background: #FFF;
-	width: 100%;
-}
-
-.bbcnews .scroll-container {
-	position: relative;
-	height: 1.5em;
-	width: 100%;
-	overflow: hidden;
-}
-
 .newscarousel {
 	clear: both;
+	height: 200px;
 	overflow: auto;
+	z-index: 10;
 }
 
 .newscarousel .slides {
 	clear: both;
-}
-
-.newscarousel .slide {
+	height: 120px;
+	width: 100%;
 	overflow: hidden;
-	text-overflow: ellipsis;
+	position: absolute;
 }
 
+.newscarousel .aptocarousel-controls {
+	margin-top: 120px;
+}
 
-.bbcnews .previous_next_button {
+.newscarousel .aptocarousel-pagination,
+.newscarousel .previous {
+	float: left;
+}
+
+.newscarousel .aptocarousel-pagination {
+	text-align: center;
+	width: 90%;
+}
+
+.newscarousel .next,
+.newscarousel .previous {
 	background: #FFF;
-	border-radius: 5px;
-	box-shadow: #999 0px 1px 2px;
+	border: 2px solid #EEE;
+	border-radius: 20px;
+	color: #888;
 	cursor: pointer;
-	padding: 0.5em;
-	margin: 0.3em;
-	transition: background 0.3s;
+	font-size: 0.7em;
+	transition: all .5s;
 }
-.bbcnews .previous_next_button:hover {
-	background: #EEE;
-}
-	.bbcnews .previous_next_button img {
-		height: 0.7em;
-	}
-	.bbcnews .previous_button {
-		float: left;
-	}
-	.bbcnews .next_button {
-		float: right;
-	}
 
-.bbcnews ul {
-	clear: both;
+.newscarousel .aptocarousel-pagination li {
+	display: inline-block;
 }
-.bbcnews li {
+
+.newscarousel .aptocarousel-pagination button {
+	background: #FFF;
+	color: #999;
+	cursor: pointer;
+	border: 2px solid #EEE;
+	border-radius: 20px;
+	margin-right: 2px;
+	font-size: 0.7em;
+	transition: all .5s;
+}
+
+.newscarousel .aptocarousel-pagination button.current {
+	border: 2px solid #DDD;
+	background: #EEE;
+	color: #888;
+	transition: all .5s;
+}
+
+.newscarousel .next:hover,
+.newscarousel .previous:hover,
+.newscarousel .aptocarousel-pagination button:hover {
+	background: #C44D58;
+	border-color: #B33C47;
+	color: #FFF;
+	transition: all .5s;
+}
+
+.newscarousel .slide li {
 	display: inline-block;
 	padding: 0.1em 0.3em;
 	width: 30%;
 	float: left;
 }
-.bbcnews li p {
-	text-overflow: ellipsis;
+
+.newscarousel .next {
+	float: right;
 }
+
+.newscarousel .slide {
+	display: inline-block;
+	height: 120px;
+	width: 100%;
+	position: absolute;
+	transition: width: .0s, visibility .0s;
+	overflow: hidden;
+	visibility: visible;
+	z-index: 11;
+}
+
+.newscarousel .slide.cloaked {
+	transition: height .7s, visibility .7s;
+	height: 0%;
+	visibility: hidden;
+	z-index: 12;
+}
+
+.newscarousel .slide.approaching {
+	transition: height .7s, visibility .7s;
+	visibility: hidden;
+	z-index: 3;
+}
+
+
+.newscarousel .slide .content {
+	min-width: 900px;
+	width: 100%;
+	height: 120px;
+	background: #FFF;
+}
+
+.newscarousel .content li {
+	min-width: 320px;
+}
+/** BBC NEWS STUFF ENDS HERE **/
+
 .favourites {  }
 .weather {  }
 .clock-inner .clock-date {
@@ -612,27 +675,36 @@ ul li, ol li {
 	padding: 0.1em 0;
 }
 
-@media screen and (max-width: 850px) {
-	.onethird {
-		float: none;
-		width: auto;
-	}
-	
-	.twothird {
-		float: none;
-		width: auto;
-	}
-}
-
 @media screen and (max-width: 600px) {
 	.bbcnews .agile_carousel {
-		height: 475px; 
+		height: 475px;
 	}
 	.bbcnews .slides {
 		height: 435px;
 	}
 	.bbcnews .slide {
 		clear: both;
+		width: auto;
+	}
+
+	/** News Carousel Stuff */
+	.newscarousel .aptocarousel-pagination {
+		display: none;
+	}
+
+	/* TODO Increase height of newscarousel slides/container */
+
+	/* TODO Make list items full width (displaying 3 high at a time) */
+}
+
+@media screen and (max-width: 850px) {
+	.onethird {
+		float: none;
+		width: auto;
+	}
+
+	.twothird {
+		float: none;
 		width: auto;
 	}
 }
