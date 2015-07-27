@@ -49,11 +49,10 @@ $(document).ready(function() {
 
     $('.toolbarbtn').on('click', function() {
         $('#toolbar').toggleClass('closed');
-        console.log('Whoee, beautiful transitions.');
     });
 
     //FIXME
-	//outputUsage();
+	outputUsage();
 
 
 });

@@ -18,8 +18,8 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 { font-size: 1.3em; }
 h2, h3 { font-size: 1.2em }
-    h2 { margin: 1em 0 0.5em; }
-    h3 { margin: 0.5em 0 0.5em -1em; transform: skew(-5deg, 0deg); }
+    h2 { margin: 1em 0 1em; }
+    h3 { margin: .5em 0 .75em -.3em; transform: skew(-3deg, 0deg); }
 h4, h5 { font-size: 1.1em }
 
 article {
@@ -34,6 +34,7 @@ section {
 
 p {
     margin-bottom: 1em;
+    line-height: 1.28em;
 }
 strong {
     font-weight: bold;

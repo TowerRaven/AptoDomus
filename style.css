@@ -219,9 +219,18 @@ button {
     #toolbar .button {
       margin-bottom: 0.4em;
     }
+		#toolbar .button.disabled {
+			background: #555;
+			color: #333;
+			box-shadow: #333 0px 1px 0 0px;
+		}
     #editswitch {
       margin: 0.2em 0em;
     }
+	#toolbar a {
+		color: #FFF;
+		text-decoration: none;
+	}
 
   #toolbar.closed .toolbarbtn .svg {
     transform: rotate(0deg);
@@ -336,6 +345,7 @@ input[name=site-title] {
 	cursor: pointer;
 	padding: 0.4em 0.4em 0.4em 0.4em;
 }
+
 .switch {
 	cursor: pointer;
 }
