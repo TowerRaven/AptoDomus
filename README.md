@@ -12,4 +12,4 @@ Coming soon.
 
 ## Source Code
 The latest version can be found on the
-[master branch](https://github.com/TowerRaven/AptoDomus).
+[aptocarousel branch](https://github.com/TowerRaven/AptoDomus/tree/aptocarousel).
