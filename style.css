@@ -190,7 +190,7 @@ button {
   }
 
 #toolbar {
-  background: #333;
+  background: rgba(51, 51, 51, 0.93);
   color: #FFF;
   position: fixed;
   right: 0px;
@@ -245,7 +245,6 @@ button {
 #toolbar.closed ul { visibility: hidden; transition: all .3s; }
 #toolbar.closed ul li {
 	background: transparent;
-	color: rgba(255, 255, 255, 0);
 	transition: all .3s;
 	padding: 0;
 	margin: 0;
@@ -563,13 +562,13 @@ ul li, ol li {
 .newscarousel .slides {
 	clear: both;
 	height: 120px;
-	width: 100%;
+	width: 90%;
 	overflow: hidden;
 	position: absolute;
 }
 
 .newscarousel .aptocarousel-controls {
-	margin-top: 120px;
+	margin-top: 123px;
 }
 
 .newscarousel .aptocarousel-pagination,
@@ -627,7 +626,7 @@ ul li, ol li {
 .newscarousel .slide li {
 	display: inline-block;
 	padding: 0.1em 0.3em;
-	width: 30%;
+	width: 32%;
 	float: left;
 }
 
@@ -661,14 +660,15 @@ ul li, ol li {
 
 
 .newscarousel .slide .content {
-	min-width: 900px;
+	min-width: 780px;
 	width: 100%;
 	height: 120px;
 	background: #FFF;
+	overflow: hidden;
 }
 
 .newscarousel .content li {
-	min-width: 320px;
+	min-width: 260px;
 }
 /** BBC NEWS STUFF ENDS HERE **/
 
@@ -707,7 +707,7 @@ ul li, ol li {
 	/* TODO Make list items full width (displaying 3 high at a time) */
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 900px) {
 	.onethird {
 		float: none;
 		width: auto;
@@ -716,5 +716,32 @@ ul li, ol li {
 	.twothird {
 		float: none;
 		width: auto;
+	}
+	
+	.newscarousel {
+		height: 440px;
+	}
+	
+	.newscarousel .slides {
+		height: 240px;
+	}
+	
+	.newscarousel .slide {
+		height: 240px;
+	}
+	
+	.newscarousel .slide .content {
+		height: 240px;
+	}
+	
+	.newscarousel .slide li {
+		width: auto;
+		height: 80px;
+		padding-right: 80px
+		min-width: auto;
+	}
+	
+	.newscarousel .aptocarousel-controls {
+		margin-top: 246px;
 	}
 }
