@@ -3,7 +3,8 @@
  * Version: 0.04
  * Dependencies: jQuery (v2+).
  */
-var home_version = "0.04";
+var home_version = "0.06";
+var is_server = true;
 
 $(document).ready(function() {
 	// Hide the JavaScript warning
@@ -51,8 +52,5 @@ $(document).ready(function() {
         $('#toolbar').toggleClass('closed');
     });
 
-    //FIXME
 	outputUsage();
-
-
 });
