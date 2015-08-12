@@ -24,7 +24,7 @@ $(document).ready(function() {
 	 */
 	initLocalStorage(home_version);
 
-	console.log(logUsage());
+	initDialogues();
 
 	/**
 	 * initPage generates the layout and populates it with widgets
@@ -46,4 +46,13 @@ $(document).ready(function() {
 		}).slideDown();
 		console.log('Urgh, so satisfying :Q');
 	});
+
+    $('.toolbarbtn').on('click', function() {
+        $('#toolbar').toggleClass('closed');
+    });
+
+    //FIXME
+	outputUsage();
+
+
 });
