@@ -48,6 +48,8 @@ if($type == 'weather') {
         //TODO throw out error
     } else {
         $args['location'] = filter_var($_GET['location'], FILTER_SANITIZE_NUMBER_INT);
+		if($args['location'] == 0)
+			$args['location'] = 2643743;
     }
 }
 

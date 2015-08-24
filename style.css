@@ -673,7 +673,24 @@ ul li, ol li {
 /** BBC NEWS STUFF ENDS HERE **/
 
 .favourites {  }
-.weather {  }
+.bbcweather {  }
+.bbcweather .weather {
+	padding: 0.3em;
+}
+	.bbcweather .weather-item {
+		margin-bottom: 0.7em;
+	}
+	.bbcweather .weather-item li {
+		margin-bottom: 0.25em;
+	}
+	.bbcweather .day {
+		font-size: 1em;
+		font-weight: bold;
+	}
+	.bbcweather .skies,
+	.bbcweather .temp {
+		font-size: 0.9em;
+	}
 .clock-inner .clock-date {
 	font-size: 1.5em;
 	text-align: center;
