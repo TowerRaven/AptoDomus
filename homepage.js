@@ -34,6 +34,11 @@ $(document).ready(function() {
 
 	initEditMode();
 
+	/**
+	 * Finally, apply the theme if it exists
+	 */
+	initTheme();
+
 	//TODO Remove
 	$("[name='resetls']").on('click', function() {
 		$('#content').slideUp("normal", function() {
