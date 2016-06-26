@@ -11,11 +11,23 @@
  */
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
+html, body {
+	max-width: 100%;
+	overflow-x: hidden;
+}
+
+body {
+	padding-right: 44px;
+}
 
 html, body, input {
 	font-family: 'Open Sans', ariel, sans-serif;
 	font-weight: 300;
 	color: #556270;
+}
+
+#wrap {
+	overflow: auto;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -158,14 +170,93 @@ button {
 #wrap > header h1 { float: left; }
 #wrap > footer {  }
 
-#toolbar { float: right; }
+.toolbarbtn {
+  float: right;
+  background: transparent;
+  border: none;
+}
+
+#toolbar .toolbarbtn {
+  float: left;
+  width: 100%;
+  margin-top: 1em;
+}
+  #toolbar .toolbarbtn .svg path {
+	fill: #ffffff;
+  }
+  #toolbar .toolbarbtn .svg {
+    transform: rotate(-450deg);
+    transition: transform 1s;
+  }
+
+#toolbar {
+  background: rgba(51, 51, 51, 0.93);
+  color: #FFF;
+  position: fixed;
+  right: 0px;
+  height: 100%;
+  top: 0px;
+  z-index: 1000;
+  padding: 0;
+  width: 180px;
+  transition: width 1s, color 0.3s;
+  transition-delay: color 1s;
+}
 	#toolbar ul {
+		color: #FFF;
 		margin: 0;
-		padding: 0;
+		padding: 1em;
+		transition: color .3s;
+		visibility: visible;
 	}
 	#toolbar ul li {
-		display: inline-block;
+		color: rgba(255, 255, 255, 1);
+		width: 135px;
+		transition: color .3s;
+		transition-delay: 1s;
+		visibility: visible;
 	}
+    #toolbar .button {
+      margin-bottom: 0.4em;
+    }
+		#toolbar .button.disabled {
+			background: #555;
+			color: #333;
+			box-shadow: #333 0px 1px 0 0px;
+		}
+    #editswitch {
+      margin: 0.2em 0em;
+    }
+	#toolbar a {
+		color: #FFF;
+		text-decoration: none;
+	}
+
+  #toolbar.closed .toolbarbtn .svg {
+    transform: rotate(0deg);
+    transition: transform 1s;
+    transition-delay: .3s;
+  }
+#toolbar.closed {
+	width: 44px; padding: 0;
+	/*transition: width 1s, height .0s;
+	transition-delay: .3s; */
+}
+#toolbar.closed ul { visibility: hidden; transition: all .3s; }
+#toolbar.closed ul li {
+	background: transparent;
+	transition: all .3s;
+	padding: 0;
+	margin: 0;
+	overflow: none;
+	box-shadow: none;
+	line-height: 0px;
+	visibility: hidden;
+}
+#toolbar.closed ul li input[type=checkbox] {
+	display: none;
+	transition: all .3s;
+}
 
 #content {
 	padding: 0em 0.6em 1.2em 0.6em;
@@ -185,7 +276,7 @@ button {
 	overflow: auto;
 
 	border-radius: 3px;
-	border: 2px dashed transparent;
+	border: 1px dashed transparent;
 	text-align: right;
 	transition: border 0.4s;
 }
@@ -205,12 +296,11 @@ button {
 	margin: 0.6em;
 
 	border-radius: 3px;
-	border: 2px dashed transparent;
+	border: 1px dashed transparent;
 	transition: border 0.4s;
 }
 
 .fullwidth {
-	width: 96.5%;
 	clear: both;
 }
 .onethird {
@@ -233,8 +323,8 @@ button {
 	line-height: 1em;
 }
 
-.edit-mode-on .row { border: 2px dashed #CCC; }
-.edit-mode-on .col { border: 2px dashed #DDD; }
+.edit-mode-on .row { border: 1px dashed #CCC; }
+.edit-mode-on .col { border: 1px dashed #DDD; }
 	.edit-mode-on .inner { padding: 0.6em; }
 header h1 {
 	text-align: middle;
@@ -254,6 +344,7 @@ input[name=site-title] {
 	cursor: pointer;
 	padding: 0.4em 0.4em 0.4em 0.4em;
 }
+
 .switch {
 	cursor: pointer;
 }
@@ -298,8 +389,8 @@ input[name=site-title] {
 }
 .submitadd, .submitremoval {
 	border: none;
-	border-radius: 10px;
-	box-shadow: #999 0 2px 0 -1px;
+	border-radius: 3px;
+	box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.7);
 	cursor: pointer;
 	height: 20px;
 	line-height: 20px;
@@ -456,58 +547,218 @@ ul li, ol li {
 			margin: 0 0.3em 0 0.2em;
 		}
 
+
 .bbcnews > h2 {
 	padding: 0.3em;
 }
 
-.bbcnews .slide {
-	background: #FFF;
-	width: 100%;
+.newscarousel {
+	clear: both;
+	height: 200px;
+	overflow: auto;
+	z-index: 10;
 }
 
-.bbcnews .scroll-container {
-	position: relative;
-	height: 1.5em;
+.newscarousel .slides {
+	clear: both;
+	height: 120px;
+	width: 90%;
+	overflow: hidden;
+	position: absolute;
+}
+
+.newscarousel .aptocarousel-controls {
+	margin-top: 123px;
+}
+
+.newscarousel .aptocarousel-pagination,
+.newscarousel .previous {
+	float: left;
+}
+
+.newscarousel .aptocarousel-pagination {
+	text-align: center;
+	width: 90%;
+}
+
+.newscarousel .next,
+.newscarousel .previous {
+	background: #FFF;
+	border: 2px solid #EEE;
+	border-radius: 20px;
+	color: #888;
+	cursor: pointer;
+	font-size: 0.7em;
+	transition: all .5s;
+}
+
+.newscarousel .aptocarousel-pagination li {
+	display: inline-block;
+}
+
+.newscarousel .aptocarousel-pagination button {
+	background: #FFF;
+	color: #999;
+	cursor: pointer;
+	border: 2px solid #EEE;
+	border-radius: 20px;
+	margin-right: 2px;
+	font-size: 0.7em;
+	transition: all .5s;
+}
+
+.newscarousel .aptocarousel-pagination button.current {
+	border: 2px solid #DDD;
+	background: #EEE;
+	color: #888;
+	transition: all .5s;
+}
+
+.newscarousel .next:hover,
+.newscarousel .previous:hover,
+.newscarousel .aptocarousel-pagination button:hover {
+	background: #C44D58;
+	border-color: #B33C47;
+	color: #FFF;
+	transition: all .5s;
+}
+
+.newscarousel .slide li {
+	display: inline-block;
+	padding: 0.1em 0.3em;
+	width: 32%;
+	float: left;
+}
+
+.newscarousel .next {
+	float: right;
+}
+
+.newscarousel .slide {
+	display: inline-block;
+	height: 120px;
 	width: 100%;
+	position: absolute;
+	transition: width: .0s, visibility .0s;
+	overflow: hidden;
+	visibility: visible;
+	z-index: 11;
+}
+
+.newscarousel .slide.cloaked {
+	transition: height .7s, visibility .7s;
+	height: 0%;
+	visibility: hidden;
+	z-index: 12;
+}
+
+.newscarousel .slide.approaching {
+	transition: height .7s, visibility .7s;
+	visibility: hidden;
+	z-index: 3;
+}
+
+
+.newscarousel .slide .content {
+	min-width: 780px;
+	width: 100%;
+	height: 120px;
+	background: #FFF;
 	overflow: hidden;
 }
 
-.newscarousel {
-	clear: both;
-	overflow: auto;
+.newscarousel .content li {
+	min-width: 260px;
 }
+/** BBC NEWS STUFF ENDS HERE **/
 
-
-.bbcnews .previous_next_button {
-	background: #FFF;
-	border-radius: 5px;
-	box-shadow: #999 0px 1px 2px;
-	cursor: pointer;
-	padding: 0.5em;
-	margin: 0.3em;
-	transition: background 0.3s;
-}
-.bbcnews .previous_next_button:hover {
-	background: #EEE;
-}
-	.bbcnews .previous_next_button img {
-		height: 0.7em;
-	}
-	.bbcnews .previous_button {
-		float: left;
-	}
-	.bbcnews .next_button {
-		float: right;
-	}
-
-.bbcnews ul {
-	clear: both;
-}
-.bbcnews li {
-	display: inline-block;
-	padding: 0.1em 0.3em;
-	width: 30%;
-	float: left;
-}
 .favourites {  }
-.weather {  }
+.bbcweather {  }
+.bbcweather .weather {
+	padding: 0.3em;
+}
+	.bbcweather .weather-item {
+		margin-bottom: 0.7em;
+	}
+	.bbcweather .weather-item li {
+		margin-bottom: 0.25em;
+	}
+	.bbcweather .day {
+		font-size: 1em;
+		font-weight: bold;
+	}
+	.bbcweather .skies,
+	.bbcweather .temp {
+		font-size: 0.9em;
+	}
+.clock-inner .clock-date {
+	font-size: 1.5em;
+	text-align: center;
+	padding: 0.6em 0 0;
+}
+.clock-inner .clock-time {
+	font-size: 4em;
+	text-align: center;
+	padding: 0.1em 0;
+}
+
+@media screen and (max-width: 600px) {
+	.bbcnews .agile_carousel {
+		height: 475px;
+	}
+	.bbcnews .slides {
+		height: 435px;
+	}
+	.bbcnews .slide {
+		clear: both;
+		width: auto;
+	}
+
+	/** News Carousel Stuff */
+	.newscarousel .aptocarousel-pagination {
+		display: none;
+	}
+
+	/* TODO Increase height of newscarousel slides/container */
+
+	/* TODO Make list items full width (displaying 3 high at a time) */
+}
+
+@media screen and (max-width: 900px) {
+	.onethird {
+		float: none;
+		width: auto;
+	}
+
+	.twothird {
+		float: none;
+		width: auto;
+	}
+	
+	.newscarousel {
+		height: 440px;
+	}
+	
+	.newscarousel .slides {
+		height: 240px;
+	}
+	
+	.newscarousel .slide {
+		height: 240px;
+	}
+	
+	.newscarousel .slide .content {
+		height: 240px;
+	}
+	
+	.newscarousel .slide li {
+		width: auto;
+		height: 80px;
+		padding-right: 80px
+		min-width: auto;
+	}
+	
+	.newscarousel .aptocarousel-controls {
+		margin-top: 246px;
+	}
+}
